@@ -1,5 +1,5 @@
 # react-music-player
-music player build with react, redux, react-router(4.x),webpack，ES6
+music player build with react, redux, react-router, webpack, ES6
 
 ### How to run
  - Install Dependencies
@@ -14,4 +14,4 @@ music player build with react, redux, react-router(4.x),webpack，ES6
      ```shell
      npm run build
      ```
- 
+ - [Demo](https://miraclehu.github.io/react-music-player/)

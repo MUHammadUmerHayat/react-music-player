@@ -3,8 +3,15 @@ import { combineReducers } from 'redux';
 import { DELETE_MUSIC, PLAY, CHANGE_MUSIC_STATUS, SWITCH_SONG } from './actions';
 import MUSIC_LIST from '../config/config';
 
-
-const musicStatus = (state = {currentMusicItem: MUSIC_LIST[0], currentIndex: 0, progress: 0, volume: 0, isPlay: true, leftTime: 0}, action) => {
+const initialMusicStatus = {
+  currentMusicItem: null,
+  currentIndex: -1,
+  progress: 0,
+  volume: 0,
+  isPlay: false,
+  leftTime: 0
+      };
+const musicStatus = (state = initialMusicStatus, action) => {
   switch (action.type) {
     case PLAY:
       return Object.assign({}, state, action.playStatus);//deep copy

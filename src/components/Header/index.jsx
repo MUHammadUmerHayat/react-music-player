@@ -6,12 +6,12 @@ import './index.less';
 import Logo from '../../assets/static/images/logo.png';
 class Header extends Component {
   componentDidMount() {
-    const { currentMusicItem } = this.props.musicStatus;
+    // const { currentMusicItem } = this.props.musicStatus;
     $('#player').jPlayer({
       supplied: 'mp3',
       wmode: 'window'
     });
-    Util.playMusic(currentMusicItem);
+    // Util.playMusic(currentMusicItem);
   }
 
   render() {
