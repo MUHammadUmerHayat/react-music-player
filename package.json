@@ -2,8 +2,11 @@
   "name": "react-music-player",
   "version": "1.0.0",
   "description": "music player build by react",
+  "homepage": "https://miraclehu.github.io/react-music-player/",
   "main": "index.js",
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
@@ -15,7 +18,7 @@
     "music-player"
   ],
   "dependencies": {
-    "pubsub-js": "^1.5.7",
+    "gh-pages": "^2.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^3.1.1",

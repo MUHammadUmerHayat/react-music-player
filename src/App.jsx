@@ -1,11 +1,11 @@
-
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom';
 import './assets/static/css/reset.css';
 import './assets/static/css/common.css';
+import React from 'react';
+import {
+  HashRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import RootReducer from './reducers/reducers';
@@ -22,8 +22,10 @@ export default (
     <Router>
       <div>
         <Header />
-        <Route exact path="/" component={List} />
-        <Route path="/player" component={Player} />
+        <Switch>
+          <Route exact path="/" component={List} />
+          <Route path="/player" component={Player} />
+        </Switch>
       </div>
     </Router>
   </Provider>
