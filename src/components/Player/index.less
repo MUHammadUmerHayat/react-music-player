@@ -63,3 +63,28 @@
         display: inline-block;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .player-page {
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+        .controll-wrapper{
+            width: 80%;
+            text-align: center;
+        }
+        .content{
+            flex-direction: column-reverse;
+        }
+        .music-progress{
+            width: 100%;
+        }
+        .cover{
+            img{
+                animation:spin 4s linear infinite;
+            }
+        }
+    }
+  }
+
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

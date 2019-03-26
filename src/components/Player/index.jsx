@@ -92,7 +92,7 @@ class Player extends Component {
     const { progress, volume, isPlay, leftTime } = this.props.musicStatus;
     return (
         <div className="player-page">
-          <div className="mt20 row">
+          <div className="mt20 row content">
             <div className="controll-wrapper">
               <h2 className="music-title">{title}</h2>
               <h3 className="music-artist mt10">{artist}</h3>
