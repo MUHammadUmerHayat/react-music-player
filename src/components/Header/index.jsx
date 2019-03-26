@@ -15,7 +15,7 @@ class Header extends Component {
   }
 
   render() {
-    let path = this.props.location.pathname === '/' ? '/player' : '/';
+    let path = this.props.location.pathname === '/'&& this.props.musicStatus.currentMusicItem ? '/player' : '/';
     return (
         <div className="music-header row">
           <img src={Logo} width={40} className="music-icon" alt=""/>

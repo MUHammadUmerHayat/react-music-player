@@ -90,6 +90,9 @@ class Player extends Component {
   render() {
     const { title, artist, cover } = this.props.currentMusicItem;
     const { progress, volume, isPlay, leftTime } = this.props.musicStatus;
+    const spinStyle = {
+      animationPlayState: isPlay ?'running':'paused'
+    };
     return (
         <div className="player-page">
           <div className="mt20 row content">
@@ -124,7 +127,7 @@ class Player extends Component {
               </div>
             </div>
             <div className="-col-auto cover">
-              <img src={cover} alt={title} />
+              <img src={cover} alt={title} style={spinStyle}/>
             </div>
           </div>
         </div>
