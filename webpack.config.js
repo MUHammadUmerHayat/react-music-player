@@ -37,5 +37,6 @@ module.exports = {
     historyApiFallback: true,
     inline: true, //set true will automatically refresh the page
     port: 8080, //set the port, default 8080
+    open: 'Google Chrome'// launches the browser automatically
   }
 };

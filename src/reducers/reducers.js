@@ -14,11 +14,11 @@ const initialMusicStatus = {
 const musicStatus = (state = initialMusicStatus, action) => {
   switch (action.type) {
     case PLAY:
-      return Object.assign({}, state, action.playStatus);//deep copy
+      return {...state, ...action.playStatus};
     case CHANGE_MUSIC_STATUS:
-      return Object.assign({}, state, action.obj);
+      return {...state, ...action.obj};
     case SWITCH_SONG:
-      return Object.assign({}, state, action.currentMusic);
+      return {...state, ...action.currentMusic};
     default:
       return state;
   }
