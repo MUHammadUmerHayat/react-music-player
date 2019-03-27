@@ -27,7 +27,6 @@ class Header extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    musicList: state.musicList,
     musicStatus: state.musicStatus
   }
 }

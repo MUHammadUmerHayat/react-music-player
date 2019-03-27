@@ -21,7 +21,7 @@ export const changeMusicStatus = (obj) => {
     obj
   }
 }
-export const playMusic = (playStatus) => {
+export const playMusicStatus = (playStatus) => {
   return {
     type: PLAY,
     playStatus

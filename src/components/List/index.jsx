@@ -60,7 +60,8 @@ class List extends Component {
                     focus={item === currentMusicItem} 
                     musciItem={item} 
                     playChange={this.playHandle.bind(this, item, index)} 
-                    deleteIndex={this.deleteHandle.bind(this, index)} />
+                    deleteIndex={this.deleteHandle.bind(this, index)} 
+                  />
               )
             })
           }

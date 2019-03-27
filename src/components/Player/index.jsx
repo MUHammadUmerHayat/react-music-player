@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Progress from '../Progress/index';
 import Util from '../../config/util';
 import './index.less';
-import { changeMusicStatus, playMusic, switchSong } from '../../reducers/actions';
+import { changeMusicStatus, playMusicStatus, switchSong } from '../../reducers/actions';
 
 
 let duration = null;
@@ -22,7 +22,7 @@ class Player extends Component {
     });
 
     $(PLAYERDOM).bind($.jPlayer.event.ended, (e) => {
-      this.nextPlay();
+      this.nextPlay();//when the music ends, auto play the next one
     });
   }
   componentWillUnmount() {
@@ -57,7 +57,7 @@ class Player extends Component {
     } else {
       $(PLAYERDOM).jPlayer('play');
     }
-    dispatch(playMusic({
+    dispatch(playMusicStatus({
       isPlay: !isPlay
     }));
   }

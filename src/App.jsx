@@ -15,7 +15,10 @@ import List from './components/List/index';
 import Player from './components/Player/index';
 import Header from './components/Header/index';
 
-let store = createStore(RootReducer);
+let store = createStore(
+  RootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  );
 const emptyStyle = {
   textAlign: 'center',
   marginTop: '50px',
